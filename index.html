@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">My Webs.com</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Profil</a></li>
+                    <li><a href="#audio-video">Audio Video</a></li>
+                    <li><a href="#news">Berita</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>My Webs.com</h1>
+            <p>Website ini masih Dalam Pembelajaran  Dari tugas desain web</p>
+            <a href="#" class="btn">Info Lebih Lanjut</a>
+            <a href="#" class="btn">Kontak Saya</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Profil Saya</h2>
+            <div class="profile-content">
+                <img src="WhatsApp Image 2024-07-29 at 12.00.05_978ee20a.jpg" alt="Gambar Kota Fak-Fak" class="profile-image">
+                <div class="profile-text">
+                    <table class="profile-table">
+                        <tr>
+                            <th>Nama</th>
+                            <td>SITI HAJIJA</td>
+                        </tr>
+                        <tr>
+                            <th>TTL</th>
+                            <td>KWAMOR, 07-06-2004</td>
+                        </tr>
+                        <tr>
+                            <th>Asal</th>
+                            <td>Seram</td>
+                        </tr>
+                        <tr>
+                            <th>Pendidikan</th>
+                            <td>Mahasiswa Politeknik Negeri Fakfak, Jurusan Manajemen Informatika</td>
+                        </tr>
+                        <tr>
+                            <th>Hobi</th>
+                            <td>Bernyanyi dan bermain musik</td>
+                        </tr>
+                        <tr>
+                            <th>Makanan Favorit</th>
+                            <td>Bakso</td>
+                        </tr>
+                        <tr>
+                            <th>Minuman Favorit</th>
+                            <td>Es teh</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="audio-video" class="audio-video">
+        <div class="container">
+            <h2>Audio Video</h2>
+            <div class="media">
+                <h3>Audio</h3>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                </audio>
+                <p></p>
+            </div>
+            <div class="media">
+                <h3>Video</h3>
+                <video controls width="600">
+                    <source src="WhatsApp Video 2024-07-27 at 23.25.04_94d22f2c.mp4" type="video/mp4">
+                </video>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <section id="news" class="news">
+        <div class="container">
+            <h2>Berita</h2>
+            <p>:</p>
+            <div class="news-grid">
+                <article>
+                    <img src="" alt="Pulau di Jepang" class="news-image">
+                    <div class="news-content">
+                        <h3>Seru! Jepang Akan Gelar Event Petak Umpet di Pulau Tak Berpenghuni</h3>
+                        <p>Di sebuah pulau tak berpenghuni, Jepang mengajak pelancong untuk berwisata sambil bermain petak umpet di pulau tak berpenghuni yang pastinya seru dan menantang. <a href="https://travel.detik.com/travel-news/d-7460509/seru-jepang-akan-gelar-event-petak-umpet-di-pulau-tak-berpenghuni">Baca selengkapnya</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Hubungi Saya</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>by.Sity HAJIJA</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.container, header, .logo, nav, .hero, .about, .services, .contact, .audio-video, .news, footer, .biodata-container, .image-container, .text-container, .biodata-table');
+
+            function checkScroll() {
+                elements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('scroll-in');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); 
+        });
+    </script>
+</body>
+</html>
